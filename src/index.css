@@ -54,6 +54,10 @@
     @apply bg-background text-foreground;
   }
 
+  h1, h2 {
+    font-family: "Cinzel", serif;
+  }
+
   html {
     scroll-behavior: smooth;
   }

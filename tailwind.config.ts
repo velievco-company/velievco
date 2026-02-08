@@ -22,6 +22,7 @@ export default {
         sans: ["Inter", "system-ui", "sans-serif"],
         playfair: ['"Playfair Display"', "serif"],
         cormorant: ['"Cormorant Garamond"', "serif"],
+        cinzel: ["Cinzel", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",
