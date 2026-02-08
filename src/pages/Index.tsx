@@ -140,55 +140,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Case Results */}
-      <section className="py-24 lg:py-32 bg-card">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <ScrollReveal>
-            <div className="text-center mb-20">
-              <p className="font-playfair text-sm uppercase tracking-[0.3em] text-primary mb-4">
-                Results
-              </p>
-              <h2 className="font-cormorant text-4xl md:text-5xl font-light text-foreground">
-                Performance That Speaks
-              </h2>
-            </div>
-          </ScrollReveal>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[{
-            value: "+340%",
-            label: "Organic Growth"
-          }, {
-            value: "98%",
-            label: "Client Retention"
-          }, {
-            value: "£2.4M",
-            label: "Revenue Generated"
-          }, {
-            value: "150+",
-            label: "Cases Managed"
-          }].map((stat, i) => <ScrollReveal key={stat.label} delay={i * 100}>
-                <div className="text-center">
-                  <p className="font-cormorant text-4xl md:text-5xl font-light text-primary mb-3">
-                    {stat.value}
-                  </p>
-                  <p className="font-playfair text-xs uppercase tracking-[0.2em] text-muted-foreground">
-                    {stat.label}
-                  </p>
-                </div>
-              </ScrollReveal>)}
-          </div>
-          <ScrollReveal delay={400}>
-            <div className="text-center mt-16">
-              <Link to="/demo-cases">
-                <Button variant="outline" className="rounded-2xl px-8 py-5 font-playfair tracking-wider uppercase border-primary/30 text-primary hover:bg-primary/10 hover:text-primary">
-                  View Case Studies
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
 
       {/* Final CTA */}
       <section className="py-24 lg:py-32">

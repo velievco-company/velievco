@@ -1,52 +1,50 @@
-import { Shield, TrendingUp, Globe, Users, ArrowRight } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 
-const services = [
+const packages = [
   {
-    icon: TrendingUp,
-    title: "Lead Generation",
-    desc: "We deploy sophisticated, multi-channel lead acquisition strategies that deliver qualified prospects through premium channels. Our approach combines advanced targeting with elegant execution.",
+    tier: "Basic",
+    name: "Мониторинг & Отзывы",
+    desc: "Базовый пакет для контроля онлайн-репутации: отслеживание упоминаний и профессиональная работа с отзывами.",
     features: [
-      "Account-Based Marketing",
-      "Premium Content Funnels",
-      "Strategic Partnerships",
-      "Executive Outreach Programs",
+      "Мониторинг упоминаний бренда",
+      "Ответы на отзывы (Google, Trustpilot, Yelp)",
+      "Ежемесячный отчёт по репутации",
+      "Оповещения о негативных упоминаниях",
+      "Базовая аналитика",
     ],
+    highlight: false,
   },
   {
-    icon: Shield,
-    title: "Reputation Management",
-    desc: "Comprehensive monitoring, protection, and enhancement of your online presence. We ensure your digital footprint reflects the excellence of your real-world standing.",
+    tier: "Professional",
+    name: "Рост & Продвижение",
+    desc: "Комплексный пакет: управление репутацией дополнено SEO-оптимизацией и SERM-стратегией для усиления вашего присутствия в поиске.",
     features: [
-      "24/7 Reputation Monitoring",
-      "Crisis Management",
-      "Review Strategy",
-      "Content Suppression",
+      "Всё из пакета Basic",
+      "SEO-оптимизация",
+      "SERM (управление поисковой выдачей)",
+      "Контент-маркетинг (2 статьи/месяц)",
+      "Управление социальными сетями",
+      "Еженедельная отчётность",
     ],
+    highlight: true,
   },
   {
-    icon: Globe,
-    title: "Paid Advertising",
-    desc: "Strategic media buying and campaign management across premium digital platforms. Every pound invested is optimised for maximum return and brand alignment.",
+    tier: "Enterprise",
+    name: "Полное Управление",
+    desc: "Максимальный пакет для бизнеса, включающий PR-сопровождение, расширенный контент-маркетинг и стратегическое консультирование.",
     features: [
-      "Premium Platform Management",
-      "Programmatic Buying",
-      "Performance Analytics",
-      "Brand-Safe Environments",
+      "Всё из пакета Professional",
+      "PR-сопровождение и медиарилейшнз",
+      "Расширенный контент-маркетинг (8+ материалов/месяц)",
+      "Paid Advertising (PPC, таргет)",
+      "Стратегическое консультирование",
+      "Кризисный менеджмент 24/7",
+      "Персональный аккаунт-менеджер",
     ],
-  },
-  {
-    icon: Users,
-    title: "Strategy & Consulting",
-    desc: "Executive-level strategic counsel for organisations and individuals navigating complex reputational and competitive landscapes. We provide the clarity needed for decisive action.",
-    features: [
-      "Board-Level Advisory",
-      "Competitive Analysis",
-      "Market Positioning",
-      "Risk Assessment",
-    ],
+    highlight: false,
   },
 ];
 
@@ -58,58 +56,72 @@ const Services = () => {
         <div className="max-w-5xl mx-auto px-6 text-center">
           <ScrollReveal>
             <p className="font-playfair text-sm uppercase tracking-[0.3em] text-primary mb-6">
-              Our Services
+              Наши Услуги
             </p>
             <h1 className="font-cormorant text-5xl md:text-6xl lg:text-7xl font-light text-foreground leading-tight">
-              Tailored Solutions for
+              Пакеты Услуг
               <br />
-              <span className="text-primary">Exceptional Clients</span>
+              <span className="text-primary">Для Вашего Бизнеса</span>
             </h1>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Service Cards */}
+      {/* Packages */}
       <section className="pb-24 lg:pb-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="space-y-8">
-            {services.map((service, i) => (
-              <ScrollReveal key={service.title} delay={i * 100}>
-                <div className="group bg-card rounded-3xl p-10 lg:p-14 border border-border hover:border-primary/30 transition-all duration-500 hover:shadow-[0_8px_40px_-12px_hsl(30_39%_85%/0.15)]">
-                  <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 items-start">
-                    <div>
-                      <div className="flex items-center gap-5 mb-6">
-                        <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-500">
-                          <service.icon className="h-6 w-6 text-primary" />
-                        </div>
-                        <h2 className="font-playfair text-2xl text-foreground">
-                          {service.title}
-                        </h2>
-                      </div>
-                      <p className="text-muted-foreground leading-relaxed mb-8 max-w-2xl">
-                        {service.desc}
-                      </p>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        {service.features.map((f) => (
-                          <p
-                            key={f}
-                            className="text-sm text-muted-foreground flex items-center gap-3"
-                          >
-                            <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
-                            {f}
-                          </p>
-                        ))}
-                      </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {packages.map((pkg, i) => (
+              <ScrollReveal key={pkg.tier} delay={i * 150}>
+                <div
+                  className={`relative flex flex-col h-full rounded-3xl p-8 lg:p-10 border transition-all duration-500 hover:-translate-y-1 ${
+                    pkg.highlight
+                      ? "border-primary bg-primary/5 shadow-[0_8px_40px_-12px_hsl(30_39%_85%/0.25)]"
+                      : "border-border bg-card hover:border-primary/30 hover:shadow-[0_8px_40px_-12px_hsl(30_39%_85%/0.15)]"
+                  }`}
+                >
+                  {pkg.highlight && (
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                      <span className="bg-primary text-primary-foreground text-xs font-playfair uppercase tracking-[0.2em] px-4 py-1 rounded-full">
+                        Популярный
+                      </span>
                     </div>
-                    <div className="hidden lg:flex items-center">
-                      <div className="w-[1px] h-32 bg-border mr-10" />
-                      <div className="text-center">
-                        <p className="font-cormorant text-5xl font-light text-primary/40">
-                          0{i + 1}
-                        </p>
+                  )}
+
+                  <p className="font-playfair text-xs uppercase tracking-[0.3em] text-primary mb-3">
+                    {pkg.tier}
+                  </p>
+                  <h2 className="font-cormorant text-2xl lg:text-3xl font-light text-foreground mb-4">
+                    {pkg.name}
+                  </h2>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-8">
+                    {pkg.desc}
+                  </p>
+
+                  <div className="space-y-3 mb-10 flex-grow">
+                    {pkg.features.map((f) => (
+                      <div key={f} className="flex items-start gap-3">
+                        <Check className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-sm text-muted-foreground">
+                          {f}
+                        </span>
                       </div>
-                    </div>
+                    ))}
                   </div>
+
+                  <Link to="/contact" className="mt-auto">
+                    <Button
+                      className={`w-full rounded-2xl py-5 font-playfair tracking-wider uppercase transition-all duration-300 ${
+                        pkg.highlight
+                          ? "hover:scale-105 shadow-lg hover:shadow-xl"
+                          : ""
+                      }`}
+                      variant={pkg.highlight ? "default" : "outline"}
+                    >
+                      Обсудить
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
                 </div>
               </ScrollReveal>
             ))}
@@ -122,15 +134,15 @@ const Services = () => {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <ScrollReveal>
             <h2 className="font-cormorant text-4xl md:text-5xl font-light text-foreground mb-8">
-              Require a Bespoke Solution?
+              Нужен индивидуальный пакет?
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-12 leading-relaxed">
-              Each client engagement is unique. Contact us to discuss how we can
-              tailor our services to your specific requirements.
+              Каждый клиент уникален. Свяжитесь с нами, чтобы обсудить
+              персональное решение под ваши задачи.
             </p>
             <Link to="/contact">
               <Button className="rounded-2xl px-10 py-6 text-base font-playfair tracking-wider uppercase hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
-                Discuss Your Needs
+                Связаться с нами
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>

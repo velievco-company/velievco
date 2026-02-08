@@ -1,32 +1,5 @@
 import ScrollReveal from "@/components/ScrollReveal";
 
-const milestones = [
-  {
-    year: "2015",
-    title: "Founded in London",
-    desc: "Established as a boutique consultancy serving high-net-worth individuals and premium brands.",
-  },
-  {
-    year: "2017",
-    title: "European Expansion",
-    desc: "Extended operations across major European markets with dedicated teams in key financial centres.",
-  },
-  {
-    year: "2019",
-    title: "Digital Innovation",
-    desc: "Launched proprietary reputation monitoring and analytics platform for enterprise clients.",
-  },
-  {
-    year: "2021",
-    title: "Global Reach",
-    desc: "Expanded client base to include Fortune 500 companies and sovereign wealth entities.",
-  },
-  {
-    year: "2024",
-    title: "Industry Leadership",
-    desc: "Recognised as the leading reputation management consultancy by the Financial Times.",
-  },
-];
 
 const About = () => {
   return (
@@ -163,71 +136,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="py-24 lg:py-32">
-        <div className="max-w-4xl mx-auto px-6 lg:px-12">
-          <ScrollReveal>
-            <div className="text-center mb-20">
-              <p className="font-playfair text-sm uppercase tracking-[0.3em] text-primary mb-4">
-                Our Journey
-              </p>
-              <h2 className="font-cormorant text-4xl md:text-5xl font-light text-foreground">
-                Milestones
-              </h2>
-            </div>
-          </ScrollReveal>
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-8 md:left-1/2 md:-ml-[0.5px] top-0 bottom-0 w-[1px] bg-border" />
-
-            {milestones.map((milestone, i) => (
-              <ScrollReveal key={milestone.year} delay={i * 100}>
-                <div
-                  className={`relative flex items-start mb-16 last:mb-0 ${
-                    i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                  }`}
-                >
-                  {/* Desktop content */}
-                  <div
-                    className={`hidden md:block md:w-1/2 ${
-                      i % 2 === 0 ? "md:pr-16 md:text-right" : "md:pl-16"
-                    }`}
-                  >
-                    <p className="font-cormorant text-3xl font-light text-primary mb-2">
-                      {milestone.year}
-                    </p>
-                    <h3 className="font-playfair text-lg text-foreground mb-3">
-                      {milestone.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      {milestone.desc}
-                    </p>
-                  </div>
-
-                  {/* Timeline dot */}
-                  <div className="absolute left-8 md:left-1/2 w-4 h-4 -ml-2 md:-ml-2 rounded-full bg-primary border-4 border-background z-10" />
-
-                  {/* Mobile content */}
-                  <div className="md:hidden pl-20">
-                    <p className="font-cormorant text-3xl font-light text-primary mb-2">
-                      {milestone.year}
-                    </p>
-                    <h3 className="font-playfair text-lg text-foreground mb-3">
-                      {milestone.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      {milestone.desc}
-                    </p>
-                  </div>
-
-                  {/* Spacer for desktop */}
-                  <div className="hidden md:block md:w-1/2" />
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
     </>
   );
 };
