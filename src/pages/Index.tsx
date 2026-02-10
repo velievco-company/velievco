@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Shield, TrendingUp, Target, Users, ArrowRight, Award, Globe } from "lucide-react";
+import { Shield, Target, ArrowRight, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 const Index = () => {
