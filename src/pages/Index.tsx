@@ -85,7 +85,7 @@ const Index = () => {
             desc: "A track record of transformative results for clients who accept nothing less than exceptional performance."
           }].map((pillar, i) =>
           <ScrollReveal key={pillar.title} delay={i * 150}>
-              <div className="text-center group shadow border-primary-foreground px-[5px] py-[10px] bg-primary-foreground">
+              <div className="text-center group shadow border-primary-foreground px-[5px] py-[10px] bg-primary-foreground rounded-xl">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 mb-8 group-hover:bg-primary/20 transition-colors duration-500">
                   <pillar.icon className="h-7 w-7 text-primary" />
                 </div>
@@ -216,8 +216,8 @@ const Index = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <ScrollReveal>
           <div className="text-center mb-20">
-            <p className="font-playfair text-sm uppercase tracking-[0.3em] text-primary mb-4">Client Feedback</p>
-            <h2 className="font-cormorant text-4xl md:text-5xl font-light text-foreground">What Our Clients Say</h2>
+            <p className="font-playfair text-sm uppercase tracking-[0.3em] text-primary mb-4 bg-primary-foreground">Client Feedback</p>
+            <h2 className="font-cormorant text-4xl md:text-5xl font-medium text-primary-foreground">What Our Clients Say</h2>
           </div>
         </ScrollReveal>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
