@@ -262,8 +262,8 @@ const Index = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <ScrollReveal>
           <div className="text-center mb-20">
-            <p className="font-playfair text-sm uppercase tracking-[0.3em] text-primary mb-4">Reputation Management</p>
-            <h2 className="font-cormorant text-4xl md:text-5xl font-light text-foreground">Our Packages</h2>
+            <p className="font-playfair text-sm uppercase tracking-[0.3em] text-primary mb-4 bg-primary-foreground">Reputation Management</p>
+            <h2 className="font-cormorant text-4xl md:text-5xl text-primary-foreground font-medium">Our Packages</h2>
           </div>
         </ScrollReveal>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 opacity-90 bg-primary-foreground rounded-xl">
@@ -326,10 +326,10 @@ const Index = () => {
       <div className="max-w-4xl mx-auto px-6 text-center">
         <ScrollReveal>
           <div className="w-16 h-[1px] bg-primary mx-auto mb-12" />
-          <h2 className="font-cormorant text-4xl md:text-5xl font-light text-foreground mb-8">
+          <h2 className="font-cormorant text-4xl md:text-5xl mb-8 text-primary-foreground font-semibold">
             Ready to Elevate Your Position?
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-12 leading-relaxed">
+          <p className="text-lg max-w-2xl mx-auto mb-12 leading-relaxed font-normal text-primary-foreground">
             Begin a confidential conversation about how we can protect and
             enhance what matters most — your reputation.
           </p>
