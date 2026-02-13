@@ -85,7 +85,7 @@ const Index = () => {
             desc: "A track record of transformative results for clients who accept nothing less than exceptional performance."
           }].map((pillar, i) =>
           <ScrollReveal key={pillar.title} delay={i * 150}>
-              <div className="text-center group shadow border-primary-foreground px-[5px] py-[10px] bg-primary-foreground rounded-xl">
+              <div className="text-center group shadow border-primary-foreground px-[5px] py-[10px] bg-primary-foreground rounded-xl opacity-85">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 mb-8 group-hover:bg-primary/20 transition-colors duration-500">
                   <pillar.icon className="h-7 w-7 text-primary" />
                 </div>
@@ -115,7 +115,7 @@ const Index = () => {
           { icon: Users, step: "04", title: "Results", desc: "Transparent reporting with measurable KPIs. Continuous optimization for sustained growth." }].
           map((item, i) =>
           <ScrollReveal key={item.step} delay={i * 150}>
-              <div className="relative text-center group bg-primary-foreground py-[5px] px-[10px] shadow-md rounded-sm">
+              <div className="relative text-center group bg-primary-foreground py-[5px] px-[10px] shadow-md rounded-sm opacity-90">
                 <div className="text-5xl font-cormorant font-light text-primary/20 mb-4">{item.step}</div>
                 <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary/10 mb-6 group-hover:bg-primary/20 transition-colors duration-500">
                   <item.icon className="h-6 w-6 text-primary" />
@@ -258,7 +258,7 @@ const Index = () => {
     </section>
 
     {/* Packages */}
-    <section className="py-24 lg:py-32 rounded-xl opacity-90">
+    <section className="py-24 lg:py-32">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <ScrollReveal>
           <div className="text-center mb-20">
@@ -266,7 +266,7 @@ const Index = () => {
             <h2 className="font-cormorant text-4xl md:text-5xl font-light text-foreground">Our Packages</h2>
           </div>
         </ScrollReveal>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 opacity-90 bg-primary-foreground rounded-xl">
           {[
           {
             tier: "Basic", name: "Monitoring & Reviews",
