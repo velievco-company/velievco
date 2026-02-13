@@ -66,7 +66,7 @@ const Index = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 shadow">
         <ScrollReveal>
           <div className="text-center mb-20">
-            <p className="font-playfair text-sm uppercase tracking-[0.3em] mb-4 text-primary-foreground font-semibold bg-primary-foreground">Our Commitment</p>
+            <p className="font-playfair text-sm uppercase tracking-[0.3em] mb-4 font-semibold bg-primary-foreground text-primary">Our Commitment</p>
             <h2 className="font-cormorant text-4xl md:text-5xl text-primary-foreground font-medium">Built on Three Pillars</h2>
           </div>
         </ScrollReveal>
@@ -104,7 +104,7 @@ const Index = () => {
         <ScrollReveal>
           <div className="text-center mb-20">
             <p className="font-playfair text-sm uppercase tracking-[0.3em] text-primary mb-4 font-medium bg-primary-foreground">OUR PROCESS</p>
-            <h2 className="font-cormorant text-4xl md:text-5xl font-light text-foreground">How We Work</h2>
+            <h2 className="font-cormorant text-4xl md:text-5xl text-primary-foreground font-medium">How We Work</h2>
           </div>
         </ScrollReveal>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -115,7 +115,7 @@ const Index = () => {
           { icon: Users, step: "04", title: "Results", desc: "Transparent reporting with measurable KPIs. Continuous optimization for sustained growth." }].
           map((item, i) =>
           <ScrollReveal key={item.step} delay={i * 150}>
-              <div className="relative text-center group">
+              <div className="relative text-center group bg-primary-foreground py-[5px] px-[10px] shadow-md rounded-sm">
                 <div className="text-5xl font-cormorant font-light text-primary/20 mb-4">{item.step}</div>
                 <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary/10 mb-6 group-hover:bg-primary/20 transition-colors duration-500">
                   <item.icon className="h-6 w-6 text-primary" />
@@ -134,14 +134,14 @@ const Index = () => {
       <div className="max-w-4xl mx-auto px-6 lg:px-12">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <p className="font-playfair text-sm uppercase tracking-[0.3em] text-primary mb-4">Free Assessment</p>
-            <h2 className="font-cormorant text-4xl md:text-5xl font-light text-foreground mb-4">Reputation Health Check</h2>
-            <p className="text-muted-foreground max-w-xl mx-auto">Answer 5 quick questions to get an instant assessment of your online reputation.</p>
+            <p className="font-playfair text-sm uppercase tracking-[0.3em] text-primary mb-4 bg-primary-foreground">Free Assessment</p>
+            <h2 className="font-cormorant text-4xl md:text-5xl mb-4 text-primary-foreground text-center font-medium">Reputation Health Check</h2>
+            <p className="max-w-xl mx-auto text-secondary text-lg font-normal">Answer 5 quick questions to get an instant assessment of your online reputation.</p>
           </div>
         </ScrollReveal>
 
         {!showResult ?
-        <div className="space-y-8">
+        <div className="space-y-8 bg-inherit">
             {questions.map((item, qi) =>
           <ScrollReveal key={qi} delay={qi * 100}>
                 <Card className="border-border/50 bg-white/5 backdrop-blur-sm">
