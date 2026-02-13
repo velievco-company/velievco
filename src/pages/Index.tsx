@@ -326,10 +326,10 @@ const Index = () => {
       <div className="max-w-4xl mx-auto px-6 text-center">
         <ScrollReveal>
           <div className="w-16 h-[1px] bg-primary mx-auto mb-12" />
-          <h2 className="font-cormorant text-4xl md:text-5xl font-light text-foreground mb-8">
+          <h2 className="font-cormorant text-4xl md:text-5xl mb-8 text-primary-foreground font-semibold">
             Ready to Elevate Your Position?
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-12 leading-relaxed">
+          <p className="text-lg max-w-2xl mx-auto mb-12 leading-relaxed text-primary-foreground font-normal">
             Begin a confidential conversation about how we can protect and
             enhance what matters most — your reputation.
           </p>
