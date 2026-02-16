@@ -37,16 +37,16 @@ const About = () => {
 In competitive industries, that gap becomes a liability.
 A single unmanaged search result, an outdated profile, a fragmented review ecosystem these are not marketing issues. They are risk exposures.
 We built a structured framework that transforms digital presence into a controlled asset. Not through noise. Not through PR theatrics. Through architecture, measurement and disciplined execution.
-Because in business, trust compounds — or deteriorates. There is no neutral state.
+
 
 
 
                   </p>
-                  <p>
-                    Today, we serve a select portfolio of clients — from
-                    prominent individuals and family offices to multinational
-                    corporations — each of whom demands excellence without
-                    compromise. Our work is never loud, but always effective.
+                  <p>Because in business, trust compounds or deteriorates. There is no neutral state.
+So the only question that matters:
+Is your reputation compounding or eroding while you focus elsewhere?
+
+
                   </p>
                 </div>
               </div>
@@ -68,11 +68,11 @@ Because in business, trust compounds — or deteriorates. There is no neutral st
         <div className="max-w-4xl mx-auto px-6 text-center">
           <ScrollReveal>
             <div className="w-16 h-[1px] bg-primary mx-auto mb-12" />
-            <blockquote className="font-cormorant text-3xl md:text-4xl lg:text-5xl font-light leading-tight italic mb-8 text-primary-foreground bg-primary">"In the realm of reputation, discretion is not merely a virtue — it is the foundation upon which all trust is b​uilt"
+            <blockquote className="font-cormorant text-3xl md:text-4xl lg:text-5xl font-light leading-tight italic mb-8 text-primary-foreground bg-brown">"Control the narrative before it controls you."
 
 
             </blockquote>
-            <p className="font-playfair text-sm uppercase tracking-[0.3em] font-medium bg-primary text-primary-foreground">KAMIL VELIEV — FOUNDING PRINCIPLE
+            <p className="font-playfair text-sm uppercase tracking-[0.3em] text-primary-foreground font-bold bg-brown">KAMIL VELIEV — FOUNDING PRINCIPLE
 
             </p>
             <div className="w-16 h-[1px] bg-primary mx-auto mt-12" />
