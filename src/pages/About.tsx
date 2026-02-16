@@ -68,11 +68,11 @@ Is your reputation compounding or eroding while you focus elsewhere?
         <div className="max-w-4xl mx-auto px-6 text-center">
           <ScrollReveal>
             <div className="w-16 h-[1px] bg-primary mx-auto mb-12" />
-            <blockquote className="font-cormorant text-3xl md:text-4xl lg:text-5xl font-light leading-tight italic mb-8 text-primary-foreground bg-brown">"Control the narrative before it controls you."
+            <blockquote className="font-cormorant text-3xl md:text-4xl lg:text-5xl font-light leading-tight italic mb-8 text-primary-foreground bg-inherit border-primary-foreground border-dashed border shadow-md">"Control the narrative before it controls you."
 
 
             </blockquote>
-            <p className="font-playfair text-sm uppercase tracking-[0.3em] text-primary-foreground font-bold bg-brown">KAMIL VELIEV — FOUNDING PRINCIPLE
+            <p className="font-playfair text-sm uppercase tracking-[0.3em] text-primary-foreground font-bold bg-inherit">KAMIL VELIEV — FOUNDING PRINCIPLE
 
             </p>
             <div className="w-16 h-[1px] bg-primary mx-auto mt-12" />
