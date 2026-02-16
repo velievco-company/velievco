@@ -33,14 +33,14 @@ const About = () => {
                   Founded on Principle. Driven by Precision.
                 </h2>
                 <div className="space-y-6 text-muted-foreground leading-relaxed">
-                  <p>
-                    Veliev & Co was established in 2015 by a team of
-                    former strategic advisors from the worlds of private banking,
-                    law, and corporate communications. Recognising a gap in the
-                    market for truly discreet, results-oriented reputation
-                    management, we set out to build a consultancy that operates
-                    with the same rigour and confidentiality expected of a
-                    private bank.
+                  <p>I founded Veliev & Co after observing a recurring structural weakness in high-value businesses: companies invest heavily in growth, operations and legal protection yet treat reputation as an afterthought.
+In competitive industries, that gap becomes a liability.
+A single unmanaged search result, an outdated profile, a fragmented review ecosystem these are not marketing issues. They are risk exposures.
+We built a structured framework that transforms digital presence into a controlled asset. Not through noise. Not through PR theatrics. Through architecture, measurement and disciplined execution.
+Because in business, trust compounds — or deteriorates. There is no neutral state.
+
+
+
                   </p>
                   <p>
                     Today, we serve a select portfolio of clients — from
