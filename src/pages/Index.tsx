@@ -70,7 +70,8 @@ const Index = () => {
             <h2 className="font-cormorant text-4xl md:text-5xl text-primary-foreground font-medium">Built on Three Pillars</h2>
           </div>
         </ScrollReveal>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        {/* Mobile horizontal scroll */}
+        <div className="flex md:hidden gap-5 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide -mx-6 px-6">
           {[{
             icon: Shield,
             title: "Absolute Discretion",
@@ -78,7 +79,31 @@ const Index = () => {
           }, {
             icon: Target,
             title: "Precision Strategy",
-            desc: "Data-driven approaches refined over years of experience. We don't guess — we engineer outcomes with surgical accuracy."
+            desc: "Data-driven approaches refined over years of experience. We don't guess вЂ” we engineer outcomes with surgical accuracy."
+          }, {
+            icon: Award,
+            title: "Proven Excellence",
+            desc: "A track record of transformative results for clients who accept nothing less than exceptional performance."
+          }].map((pillar, i) =>
+            <div key={pillar.title} className="text-center group shadow border-primary-foreground px-5 py-8 bg-primary-foreground rounded-xl opacity-85 flex-shrink-0 w-[80vw] snap-start">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 mb-8 group-hover:bg-primary/20 transition-colors duration-500">
+                <pillar.icon className="h-7 w-7 text-primary" />
+              </div>
+              <h3 className="font-playfair text-xl text-foreground mb-4">{pillar.title}</h3>
+              <p className="text-muted-foreground leading-relaxed px-[5px]">{pillar.desc}</p>
+            </div>
+          )}
+        </div>
+        {/* Desktop grid */}
+        <div className="hidden md:grid md:grid-cols-3 gap-12">
+          {[{
+            icon: Shield,
+            title: "Absolute Discretion",
+            desc: "Your reputation is handled with the confidentiality and care it deserves. Every strategy is tailored, every detail protected."
+          }, {
+            icon: Target,
+            title: "Precision Strategy",
+            desc: "Data-driven approaches refined over years of experience. We don't guess вЂ” we engineer outcomes with surgical accuracy."
           }, {
             icon: Award,
             title: "Proven Excellence",
@@ -103,14 +128,33 @@ const Index = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <ScrollReveal>
           <div className="text-center mb-20">
-            <p className="font-playfair text-sm uppercase tracking-[0.3em] text-primary mb-4 font-medium bg-primary-foreground">OUR PROCESS</p>
+            <p className="font-playfair text-sm uppercase tracking-[0.3em] text-primary mb-4 font-medium bg-primary-foreground">OURВ PROCESS</p>
             <h2 className="font-cormorant text-4xl md:text-5xl text-primary-foreground font-medium">How We Work</h2>
           </div>
         </ScrollReveal>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        {/* Mobile horizontal scroll */}
+        <div className="flex md:hidden gap-5 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide -mx-6 px-6">
           {[
           { icon: Search, step: "01", title: "Audit", desc: "Deep analysis of your current online presence, reviews, search results, and digital footprint." },
-          { icon: BarChart3, step: "02", title: "Strategy", desc: "Custom roadmap tailored to your goals — reputation repair, growth, or proactive protection." },
+          { icon: BarChart3, step: "02", title: "Strategy", desc: "Custom roadmap tailored to your goals вЂ” reputation repair, growth, or proactive protection." },
+          { icon: Megaphone, step: "03", title: "Execution", desc: "Implementation of SEO, content, PR, review management, and paid campaigns." },
+          { icon: Users, step: "04", title: "Results", desc: "Transparent reporting with measurable KPIs. Continuous optimization for sustained growth." }].
+          map((item, i) =>
+            <div key={item.step} className="relative text-center group bg-primary-foreground py-6 px-6 shadow-md rounded-sm opacity-90 flex-shrink-0 w-[75vw] snap-start flex flex-col items-center">
+              <div className="text-5xl font-cormorant font-light text-primary/20 mb-4">{item.step}</div>
+              <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary/10 mb-6 group-hover:bg-primary/20 transition-colors duration-500">
+                <item.icon className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="font-playfair text-lg text-foreground mb-3">{item.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+            </div>
+          )}
+        </div>
+        {/* Desktop grid */}
+        <div className="hidden md:grid md:grid-cols-4 gap-8">
+          {[
+          { icon: Search, step: "01", title: "Audit", desc: "Deep analysis of your current online presence, reviews, search results, and digital footprint." },
+          { icon: BarChart3, step: "02", title: "Strategy", desc: "Custom roadmap tailored to your goals вЂ” reputation repair, growth, or proactive protection." },
           { icon: Megaphone, step: "03", title: "Execution", desc: "Implementation of SEO, content, PR, review management, and paid campaigns." },
           { icon: Users, step: "04", title: "Results", desc: "Transparent reporting with measurable KPIs. Continuous optimization for sustained growth." }].
           map((item, i) =>
@@ -248,7 +292,7 @@ const Index = () => {
                   )}
                   </div>
                   <p className="text-muted-foreground leading-relaxed mb-6 flex-grow italic">"{t.quote}"</p>
-                  <p className="font-playfair text-sm text-foreground/70">— {t.role}</p>
+                  <p className="font-playfair text-sm text-foreground/70">вЂ” {t.role}</p>
                 </CardContent>
               </Card>
             </ScrollReveal>
@@ -266,7 +310,49 @@ const Index = () => {
             <h2 className="font-cormorant text-4xl md:text-5xl text-primary-foreground font-medium">Our Packages</h2>
           </div>
         </ScrollReveal>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 opacity-90 bg-primary-foreground rounded-xl">
+        {/* Mobile horizontal scroll */}
+        <div className="flex md:hidden gap-5 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide -mx-6 px-6">
+          {[
+          {
+            tier: "Basic", name: "Monitoring & Reviews",
+            features: ["Brand mention monitoring", "Review responses (Google, Trustpilot, Yelp)", "Monthly reputation report", "Negative mention alerts"],
+            highlight: false
+          },
+          {
+            tier: "Professional", name: "Growth & Visibility",
+            features: ["Everything in Basic", "SEO optimisation", "SERM (search reputation management)", "Content marketing (2 articles/month)", "Social media management"],
+            highlight: true
+          },
+          {
+            tier: "Enterprise", name: "Full Management",
+            features: ["Everything in Professional", "PR & media relations", "Paid advertising (PPC, targeting)", "Crisis management 24/7", "Strategic consulting", "Dedicated account manager"],
+            highlight: false
+          }].
+          map((pkg, i) =>
+            <div key={pkg.tier} className={`relative flex flex-col rounded-3xl p-8 border transition-all duration-500 flex-shrink-0 w-[82vw] snap-start ${
+              pkg.highlight ? "border-primary/40" : "border-white/10"
+            }`} style={{backgroundColor: 'rgba(11, 29, 45, 0.85)'}}>
+              {pkg.highlight && <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                <span className="bg-primary text-primary-foreground text-xs font-playfair uppercase tracking-[0.2em] px-4 py-1 rounded-full">Popular</span>
+              </div>}
+              <p className="font-playfair text-xs uppercase tracking-[0.3em] text-primary mb-3">{pkg.tier}</p>
+              <h3 className="font-cormorant text-2xl font-light text-white mb-6">{pkg.name}</h3>
+              <div className="space-y-3 mb-8 flex-grow">
+                {pkg.features.map((f) => <div key={f} className="flex items-start gap-3">
+                  <CheckCircle className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-white/70">{f}</span>
+                </div>)}
+              </div>
+              <Link to="/contact" className="mt-auto">
+                <Button className="w-full rounded-2xl py-5 font-playfair tracking-wider uppercase" variant={pkg.highlight ? "default" : "outline"}>
+                  Get Started <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
+          )}
+        </div>
+        {/* Desktop grid */}
+        <div className="hidden md:grid md:grid-cols-3 gap-8">
           {[
           {
             tier: "Basic", name: "Monitoring & Reviews",
@@ -287,21 +373,22 @@ const Index = () => {
           <ScrollReveal key={pkg.tier} delay={i * 150}>
               <div className={`relative flex flex-col h-full rounded-3xl p-8 lg:p-10 border transition-all duration-500 hover:-translate-y-1 ${
             pkg.highlight ?
-            "border-primary bg-primary/5 shadow-[0_8px_40px_-12px_hsl(30_39%_85%/0.25)]" :
-            "border-border bg-white/5 hover:border-primary/30 hover:shadow-[0_8px_40px_-12px_hsl(30_39%_85%/0.15)]"}`
-            }>
+            "border-primary/40 shadow-[0_8px_40px_-12px_rgba(11,29,45,0.4)]" :
+            "border-white/10 hover:border-white/20 hover:shadow-[0_8px_40px_-12px_rgba(11,29,45,0.3)]"}`
+            }
+            style={{backgroundColor: 'rgba(11, 29, 45, 0.85)'}}>
                 {pkg.highlight &&
               <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                     <span className="bg-primary text-primary-foreground text-xs font-playfair uppercase tracking-[0.2em] px-4 py-1 rounded-full">Popular</span>
                   </div>
               }
                 <p className="font-playfair text-xs uppercase tracking-[0.3em] text-primary mb-3">{pkg.tier}</p>
-                <h3 className="font-cormorant text-2xl lg:text-3xl font-light text-foreground mb-6">{pkg.name}</h3>
+                <h3 className="font-cormorant text-2xl lg:text-3xl font-light text-white mb-6">{pkg.name}</h3>
                 <div className="space-y-3 mb-8 flex-grow">
                   {pkg.features.map((f) =>
                 <div key={f} className="flex items-start gap-3">
                       <CheckCircle className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-muted-foreground">{f}</span>
+                      <span className="text-sm text-white/70">{f}</span>
                     </div>
                 )}
                 </div>
@@ -331,7 +418,7 @@ const Index = () => {
           </h2>
           <p className="text-lg max-w-2xl mx-auto mb-12 leading-relaxed font-normal text-primary-foreground">
             Begin a confidential conversation about how we can protect and
-            enhance what matters most — your reputation.
+            enhance what matters most вЂ” your reputation.
           </p>
           <Link to="/contact">
             <Button className="rounded-2xl px-10 py-6 text-base font-playfair tracking-wider uppercase hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
