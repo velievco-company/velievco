@@ -1,4 +1,5 @@
 import { ArrowRight, Download, Building2, Scale } from "lucide-react";
+import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -11,18 +12,18 @@ const caseStudies = [
   category: "Reputation Management",
   subtitle: "Restoring trust and business vitality in a crisis",
   challenge:
-  "A former partner published a highly damaging article accusing the firm of predatory practices and broken promises. It went viral — 100+ LinkedIn likes, Reddit reposts, local blog mentions. Within one week, business enquiries plummeted by 68%. Three current investors requested to withdraw.",
+  "A former partner published a highly damaging article accusing the firm of predatory practices and broken promises. It went viral вЂ” 100+ LinkedIn likes, Reddit reposts, local blog mentions. Within one week, business enquiries plummeted by 68%. Three current investors requested to withdraw.",
   approach: [
   "Identified and removed 2 of 5 negative top-10 mentions via legal and platform ToS violations",
-  "Created 4 positive articles — success stories, ROI reports, industry recognition",
+  "Created 4 positive articles вЂ” success stories, ROI reports, industry recognition",
   "Proactively secured 8 new positive Google reviews from satisfied investors",
   "Implemented 24/7 monitoring with rapid-response protocol"],
 
   results: [
   { label: "Negative Results (Top 10)", before: "50%", after: "10%" },
-  { label: "Google Rating", before: "3.4★", after: "4.1★" },
+  { label: "Google Rating", before: "3.4в…", after: "4.1в…" },
   { label: "Investor Enquiries", before: "8/mo", after: "22/mo" },
-  { label: "Recovery Rate", before: "—", after: "88%" }],
+  { label: "Recovery Rate", before: "вЂ”", after: "88%" }],
 
   timeline: "4 months",
   pdfUrl: "/cases/Case-Study-Real-Estate-Investment-Firm.pdf"
@@ -34,9 +35,9 @@ const caseStudies = [
   category: "Reputation Recovery",
   subtitle: "From a single negative article to first-page dominance",
   challenge:
-  "A successful firm with 15+ years of reputation saw conversion rates drop from 65% to 38%. The cause: a single negative article from years ago dominated Google search results, overshadowing the partner's expertise. 40% of qualified leads were lost — representing up to $1.5M in annual revenue at risk.",
+  "A successful firm with 15+ years of reputation saw conversion rates drop from 65% to 38%. The cause: a single negative article from years ago dominated Google search results, overshadowing the partner's expertise. 40% of qualified leads were lost вЂ” representing up to $1.5M in annual revenue at risk.",
   approach: [
-  "Strategic content displacement — filled Google's first page with authoritative positive content",
+  "Strategic content displacement вЂ” filled Google's first page with authoritative positive content",
   "Published expert articles on legal platforms, secured Tampa Bay Business Journal interview",
   "Optimised LinkedIn, Avvo, Martindale-Hubbell, and Google Business profiles",
   "Built a reputation shield with continuous monitoring and ready-to-publish content library"],
@@ -45,7 +46,7 @@ const caseStudies = [
   { label: "Negative Article Position", before: "#3", after: "Page 2" },
   { label: "Conversion Rate", before: "38%", after: "65%+" },
   { label: "Avvo Reviews", before: "0", after: "15+" },
-  { label: "ROI (First Year)", before: "—", after: "15×" }],
+  { label: "ROI (First Year)", before: "вЂ”", after: "15Г—" }],
 
   timeline: "12 weeks",
   pdfUrl: "/cases/Case-Study-Law-Firm-Tampa.pdf"
@@ -55,6 +56,11 @@ const caseStudies = [
 const DemoCases = () => {
   return (
     <>
+      <SEO
+        title="Case Studies вЂ” Veliev & Co | Real Reputation Results"
+        description="Real before-and-after results. See how Veliev & Co helped a law firm recover 15Г— ROI and a real estate firm restore investor confidence in 4 months."
+        canonical="https://velievco.com/demo-cases"
+      />
       {/* Hero */}
       <section className="pt-32 pb-20 lg:pt-40 lg:pb-28">
         <div className="max-w-5xl mx-auto px-6 text-center">
@@ -69,7 +75,7 @@ const DemoCases = () => {
             </h1>
             <p className="text-lg max-w-2xl mx-auto mt-8 leading-relaxed text-primary-foreground">
               Real outcomes from real engagements. Names and details protected
-              under NDA — the results speak for themselves.
+              under NDA вЂ” the results speak for themselves.
             </p>
           </ScrollReveal>
         </div>
@@ -94,7 +100,7 @@ const DemoCases = () => {
                       {cs.title}
                     </h3>
                     <p className="text-muted-foreground text-sm mt-1">
-                      {cs.location} · {cs.timeline}
+                      {cs.location} В· {cs.timeline}
                     </p>
                   </div>
                   <a href={cs.pdfUrl} download>
@@ -133,7 +139,7 @@ const DemoCases = () => {
                       key={idx}
                       className="flex items-start gap-3 text-foreground/90 leading-relaxed">
 
-                          <span className="text-primary mt-1.5 text-xs">●</span>
+                          <span className="text-primary mt-1.5 text-xs">в—Џ</span>
                           {item}
                         </li>
                     )}
