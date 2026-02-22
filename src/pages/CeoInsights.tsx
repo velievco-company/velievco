@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import SEO from "@/components/SEO";
 import ScrollReveal from "@/components/ScrollReveal";
 import articleReputationLaw from "@/assets/article-reputation-law.jpg";
 import articleBadReview from "@/assets/article-bad-review.jpg";
@@ -10,7 +11,7 @@ const articles = [
   date: "January 2026",
   title: "Why the World's Best Companies Are Named After People (And Why I Named Mine After My Family)",
   excerpt:
-  "Walk down any major financial district. Look at the agencies behind the biggest deals, the most trusted advisory. You'll see a pattern — McKinsey, Goldman Sachs, Morgan Stanley. Personal names carry weight, trust, and legacy.",
+  "Walk down any major financial district. Look at the agencies behind the biggest deals, the most trusted advisory. You'll see a pattern вЂ” McKinsey, Goldman Sachs, Morgan Stanley. Personal names carry weight, trust, and legacy.",
   readTime: "5 min read",
   image: articleNamedFamily,
   url: "https://medium.com/@velievco/why-the-worlds-best-agencies-are-named-after-people-and-why-i-named-mine-after-my-family-f897b13cfbec"
@@ -19,7 +20,7 @@ const articles = [
   date: "December 2025",
   title: "How Discipline, Reputation Work, and One Simple Spreadsheet Built My International Agency",
   excerpt:
-  "When people imagine someone starting a digital agency, they picture a guy in a glass-walled office. My reality? A tiny room, an empty Google Sheet called 'VELIEV & CO — List of leads', and a stubborn belief that discipline can turn anyone into something.",
+  "When people imagine someone starting a digital agency, they picture a guy in a glass-walled office. My reality? A tiny room, an empty Google Sheet called 'VELIEV & CO вЂ” List of leads', and a stubborn belief that discipline can turn anyone into something.",
   readTime: "3 min read",
   image: articleDiscipline,
   url: "https://medium.com/@velievco/how-discipline-reputation-work-and-one-simple-spreadsheet-built-my-international-agency-2d304da9406d"
@@ -28,7 +29,7 @@ const articles = [
   date: "November 2025",
   title: "How One Bad Review Can Cost You Clients and Money",
   excerpt:
-  "Imagine this: you spend months building your business — launching websites, running ads, hiring the best talent — only for one client to leave a bad review that wipes out all your efforts. In today's world, online reputation is everything.",
+  "Imagine this: you spend months building your business вЂ” launching websites, running ads, hiring the best talent вЂ” only for one client to leave a bad review that wipes out all your efforts. In today's world, online reputation is everything.",
   readTime: "4 min read",
   image: articleBadReview,
   url: "https://medium.com/@velievco/how-one-bad-review-can-cost-you-clients-and-money-797a812e040c"
@@ -37,7 +38,7 @@ const articles = [
   date: "November 2025",
   title: "Why Reputation Is the Real Marketing for Law Firms",
   excerpt:
-  "Most law firms still think marketing means posting templated social media content or buying ads no one clicks. But in 2025, the real marketing is not your ads — it's your reputation, and if you don't control it, it's controlling you.",
+  "Most law firms still think marketing means posting templated social media content or buying ads no one clicks. But in 2025, the real marketing is not your ads вЂ” it's your reputation, and if you don't control it, it's controlling you.",
   readTime: "4 min read",
   image: articleReputationLaw,
   url: "https://medium.com/@velievco/why-reputation-is-the-real-marketing-for-law-firms-19a69e1d5671"
@@ -47,6 +48,11 @@ const articles = [
 const CeoInsights = () => {
   return (
     <>
+      <SEO
+        title="CEO Insights вЂ” Veliev & Co | Thought Leadership on Reputation"
+        description="Perspectives on reputation management, digital strategy and brand protection from CEO Kamil Veliev. Articles on law firms, real estate and crisis management."
+        canonical="https://velievco.com/ceo-insights"
+      />
       {/* Hero */}
       <section className="pt-32 pb-20 lg:pt-40 lg:pb-28">
         <div className="max-w-5xl mx-auto px-6 text-center">
@@ -93,7 +99,7 @@ const CeoInsights = () => {
                           <span className="text-xs font-playfair uppercase tracking-[0.2em] text-muted">
                             {article.date}
                           </span>
-                          <span className="text-xs text-muted">·</span>
+                          <span className="text-xs text-muted">В·</span>
                           <span className="text-xs text-muted">
                             {article.readTime}
                           </span>
