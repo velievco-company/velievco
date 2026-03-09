@@ -28,6 +28,7 @@ const Footer = () => {
               { name: "Our Service", path: "/services" },
               { name: "Demo-Cases", path: "/demo-cases" },
               { name: "CEO Insights", path: "/ceo-insights" },
+              { name: "FAQ", path: "/faq" },
               { name: "Contact", path: "/contact" },
               { name: "Privacy Policy", path: "/privacy" }].
               map((link) =>
