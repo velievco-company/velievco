@@ -14,6 +14,7 @@ const DemoCases = lazy(() => import("./pages/DemoCases"));
 const CeoInsights = lazy(() => import("./pages/CeoInsights"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Privacy = lazy(() => import("./pages/Privacy"));
+const FAQ = lazy(() => import("./pages/FAQ"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient({
